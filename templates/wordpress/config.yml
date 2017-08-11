@@ -1,8 +1,8 @@
-name: #wordpress App
+name: wordpress  # 应用商店模板名称
 description: |
-  # A wordpress App.
-version: # Version of the Catalog to be used 
-category: # Category to be used for searching catalog entries
-maintainer: # The maintainer of the catalog entry
-license: # The license
-URL: # A URL related to the catalog entry
+  wordpress description # 应用商店模板描述
+version: 2 # 应用商店模板对应的版本
+category: ./env/1a5/catalog # 用于模板搜索时的目录
+maintainer: tracy # 该模板的维护者
+license: Apache2project # 许可类型
+projectURL: https://github.com/Tracy1994/wordpressCatalog.git # 和模板相关的URL
