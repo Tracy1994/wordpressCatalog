@@ -1,5 +1,5 @@
-name: wordpress
-Appdescription: >  A wordpress App.
+name: wordpress App
+description: |  A wordpress App.
 version: 2
 category: Tracy Apps
 maintainer: tracy <tracy@rancher.com>
