@@ -1,0 +1,7 @@
+name: wordpress
+Appdescription: >  A wordpress App.
+version: 2
+category: Tracy Apps
+maintainer: tracy <tracy@rancher.com>
+license: Apache2project
+URL: https://github.com/Tracy1994/wordpressCatalog
