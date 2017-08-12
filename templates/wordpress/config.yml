@@ -1,7 +1,7 @@
 ---name: Demo Appdescription: >
   A Demo App which does almost nothing of any practical value.
-version: 0 
+version: 0.0.1-rancher1 
 category: tracy app # 用于模板搜索时的目录
 maintainer: tracy # 该模板的维护者
 license: Apache2project # 许可类型
-projectURL: https://github.com/Tracy1994/wordpressCatalog.git # 和模板相关的URL
+projectURL: https://github.com/Tracy1994/wordpressCatalog # 和模板相关的URL
