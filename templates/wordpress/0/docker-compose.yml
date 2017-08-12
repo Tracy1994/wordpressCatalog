@@ -1,27 +1,33 @@
 version: '2'
+volumes:
+  mariadb_data:
+    driver: local
+  wordpress_data:
+    driver: local
 services:
+  mariadb:
+    image: bitnami/mariadb:10.1
+    environment:
+      MARIADB_DATABASE: bitnami_wordpress
+      MARIADB_PASSWORD: wordpress_password
+      MARIADB_ROOT_PASSWORD: mariadb_my_root
+      MARIADB_USER: wordpress_user
+    volumes:
+    - mariadb_data:/bitnami
   wordpress-lb:
     image: rancher/lb-service-haproxy:v0.7.5
     ports:
-    - 8888:8888/tcp
+    - 8181:8181/tcp
     labels:
       io.rancher.container.agent.role: environmentAdmin
       io.rancher.container.create_agent: 'true'
   wordpress:
-    image: wordpress
-    stdin_open: true
-    tty: true
-    links:
-    - db:mysql
-    labels:
-      io.rancher.container.pull_image: always
-  db:
-    image: mysql
+    image: bitnami/wordpress:4
     environment:
-      MYSQL_ROOT_PASSWORD: P@ssw0rd
-      MYSQL_DATABASE: wordpress
-    stdin_open: true
-    tty: true
-    labels:
-      io.rancher.container.pull_image: always
-
+      WORDPRESS_DATABASE_NAME: bitnami_wordpress
+      WORDPRESS_DATABASE_PASSWORD: wordpress_password
+      WORDPRESS_DATABASE_USER: wordpress_user
+      WORDPRESS_PASSWORD: bitnami
+      WORDPRESS_USERNAME: admin
+    volumes:
+    - wordpress_data:/bitnami
