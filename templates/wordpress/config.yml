@@ -1,6 +1,6 @@
 ---name: Demo Appdescription: >
   A Demo App which does almost nothing of any practical value.
-version: 2 
+version: 0 
 category: tracy app # 用于模板搜索时的目录
 maintainer: tracy # 该模板的维护者
 license: Apache2project # 许可类型
